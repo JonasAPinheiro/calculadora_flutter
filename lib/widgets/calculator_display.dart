@@ -1,15 +1,33 @@
 import 'package:flutter/material.dart';
 
-class CalculatorDisplay extends StatefulWidget {
-  const CalculatorDisplay({super.key});
+class CalculatorDisplay extends StatelessWidget {
+  //final String result;
 
-  @override
-  State<CalculatorDisplay> createState() => _CalculatorDisplayState();
-}
+  const CalculatorDisplay({
+    super.key,
+    //required this.result,
+  });
 
-class _CalculatorDisplayState extends State<CalculatorDisplay> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+      decoration: BoxDecoration(
+        color: const Color(0xfff1e4e4),
+        border: Border.all(color: const Color(0xff099a97), width: 6),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Text(
+        "12345.00",
+        //result,
+        style: const TextStyle(
+          fontSize: 48,
+          fontWeight: FontWeight.bold,
+          color: Colors.black,
+        ),
+        textAlign: TextAlign.right,
+      ),
+    );
   }
 }

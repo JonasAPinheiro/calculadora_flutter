@@ -1,3 +1,4 @@
+import 'package:calculadora_flutter/widgets/calculator_display.dart';
 import 'package:calculadora_flutter/widgets/calculator_keyboard.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +35,11 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
-          children: [const CalculatorKeyboard()],
+          children: [
+            const CalculatorDisplay(),
+            SizedBox(height: 32),
+            const CalculatorKeyboard(),
+          ],
         ),
       ),
     );
