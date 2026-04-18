@@ -35,22 +35,22 @@ enum CalcButton {
   Color backgroundColor(BuildContext context) {
     switch (type) {
       case ButtonType.action:
-        return const Color.fromARGB(255, 212, 212, 210);
+        return const Color(0xff15cda8);
       case ButtonType.operator:
-        return const Color.fromARGB(255, 176, 27, 235);
+        return const Color(0xff099a97);
       case ButtonType.number:
-        return const Color.fromARGB(255, 51, 51, 51);
+        return const Color(0xfff1e4e4);
       case ButtonType.equal:
-        return const Color.fromARGB(255, 133, 16, 211);
+        return const Color(0xff9764c7);
     }
   }
 
   Color foregroundColor() {
     switch (type) {
+      case ButtonType.number:
       case ButtonType.action:
         return Colors.black;
       case ButtonType.operator:
-      case ButtonType.number:
       case ButtonType.equal:
         return Colors.white;
     }
